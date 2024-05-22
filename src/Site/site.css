@@ -1,0 +1,235 @@
+/*    MENU DA MINHA APLICAÇÃO   */
+
+.container-nav{
+  background-color: #257cff;
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+@media (min-width: 992px) {
+  .nav{
+    position: absolute;
+    right: 5%;
+  }
+}
+
+.nav a{
+  margin-left: 25px;
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+}
+
+.nav a:hover{
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.container-nav .ico-nav{
+  font-size: 2.4rem;
+}
+
+/*    BANNER DA MINHA APLICAÇÃO   */
+
+.banner{
+  background-color: #257cff;
+  color: white;
+  padding: 0 0 60px 0;
+  margin-top: 50px;
+}
+
+.banner-img img{
+  width: 100%;
+}
+
+.banner-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-text h1{
+  padding: 0 2%;
+}
+
+.btn-banner{
+  margin: 1% 15%;
+  padding: 1%;
+}
+
+.btn-banner a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.bnt-hover:hover{
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+/*    FEATURE DA MINHA APLICAÇÃO    */
+
+.feature{
+  padding: 5%;
+}
+
+.feature-box{
+  text-align: center;
+  padding: 5%;
+}
+
+.feature-box .ico-fea{
+  font-size: 5.5rem;
+  color: #257cff;
+  margin-bottom: 15px;
+}
+
+/*    TESTEMUNHO DA MUNHA APLICÇÃO    */
+
+.testemunho{
+  padding: 5% 0;
+  background-color: rgb(223, 231, 255);
+}
+
+.testemunho .box{
+  width: 100%;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.testemunho-img{
+max-width: 15%;
+min-width: 80px;
+border-radius: 100%;
+display: block;
+margin: 10px auto;
+}
+
+/*    PLANOS DA MINHA APLICÇÃO    */
+
+.planos{
+  padding: 5% 0;
+}
+
+.planos-box{
+  margin: auto;
+}
+
+.card{
+  width: 25rem;
+  padding: 1%;
+  margin: 5% auto;
+}
+
+.planos-tag{
+  padding: 5% 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+  font-size: 3rem;
+}
+
+/*    FOOTER DA MINHA APLICAÇÃO   */ 
+
+.footer{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #257cff;
+}
+
+.footer ul{
+  width: 100%;
+  padding: 0;
+}
+
+.footer ul a{
+  padding: 0 2% ;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.footer ul a:hover{
+  color: rgb(66, 66, 66);
+}
+
+.footer-tag:hover{
+  color: rgb(66, 66, 66);
+}
+
+.info{
+  width: 100%;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.info a{
+  margin: 2% 0;
+  color: black;
+}
+
+.info a:hover{
+  color: rgba(0, 0, 0, 0.527);
+}
+
+/*    DESIGNER RESPONSIVO   */
+
+@media (max-width: 768px) {
+  .banner{
+    padding: 10% 0 60px 0;
+    margin: 40px 0 0 0;
+  }
+
+  .testemunho{
+    padding: 10% 0;
+  }
+
+  .testemunho .box{
+    padding: 0 15%;
+  }
+
+  .planos-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card{
+    margin: 10% auto;
+  }
+
+  .footer{
+    padding: 5% 2%;
+  }
+
+  .footer ul a{
+    margin: 0 3%;
+  }
+
+  .info a{
+    margin: 5% 0;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .feature-box{
+    margin: 10% 0;
+  }
+
+  .footer{
+    padding: 10% 2%;
+  }
+
+  .footer ul a{
+    margin: 0 5%;
+  }
+
+  .footer-tag{
+    margin: 5% 2%;
+  }
+}

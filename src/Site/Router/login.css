@@ -1,0 +1,136 @@
+/*    PAGINA DE LOGIN DA MINHA APLICAÇÃO    */
+
+.back{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login{
+  text-align: center;
+  padding: 0 10%;
+}
+
+.ico-dev{
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.form-email, .form-pass{
+  padding: 2%;
+  font-size: 1.8rem;
+}
+
+.form-button{
+  padding: 1% 7%;
+  font-size: 2rem;
+  margin-top: 25px;
+}
+
+.form-link {
+  margin-top: 20px;
+}
+
+.form-link Link{
+  display: block;
+  margin-top: 10px;
+}
+
+.alert-login{
+  margin-top: 10px;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.200);
+  border: 1px solid red;
+}
+
+/*    PAGINA DE CRIAR UMA CONTA DA MINHA APLICAÇÃO    */
+
+.back{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login{
+  text-align: center;
+  padding: 0 10%;
+}
+
+.form-email, .form-pass{
+  padding: 2%;
+  font-size: 1.8rem;
+}
+
+.form-button{
+  padding: 1% 7%;
+  font-size: 2rem;
+  margin-top: 25px;
+}
+
+.form-link {
+  margin-top: 20px;
+}
+
+.form-link a{
+  display: block;
+  margin-top: 10px;
+}
+
+.alert-newLogin{
+  margin-top: 10px;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.200);
+  border: 1px solid red;
+}
+
+/*    PAGINA DE CRIAR UMA CONTA DA MINHA APLICAÇÃO    */
+
+.back{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-login{
+  text-align: center;
+  padding: 0 10%;
+}
+
+.reset-email, .reset-pass{
+  padding: 2%;
+  font-size: 1.8rem;
+}
+
+.reset-button{
+  padding: 1% 7%;
+  font-size: 2rem;
+  margin-top: 25px;
+}
+
+.reset-link {
+  margin-top: 20px;
+}
+
+.reset-link a{
+  display: block;
+  margin-top: 10px;
+}
+
+.alert-erro{
+  margin-top: 10px;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.200);
+  border: 1px solid red;
+}
+
+.alert-sucesso{
+  margin-top: 10px;
+  color: green;
+  background-color: rgba(0, 128, 0, 0.226);
+  border: 1px solid green;
+}
+
+

@@ -1,0 +1,99 @@
+/*    MENU HOME DA MINHA APLICAÇÃO   */
+
+.container-home{
+  background-color: #257cff;
+  padding: 15px 1%;
+  position: static;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav-home{
+  width: 100%;
+}
+
+/*    LISTA DE CLIENTE DE MINHA APLICAÇÃO   */     
+
+.boot p{
+  display: none;
+}
+
+.top th{
+  background-color: rgb(128, 128, 128);
+  color: white;
+}
+
+.link{
+  display: flex;
+  justify-content: center;
+}
+
+.link .ico-list{
+  font-size: 22px;
+  color: red;
+}
+
+.link .one .ico-list{
+  margin: 0 15px 0 0;
+  color: blue !important; 
+}
+
+/*    DESIGNER RESPONSIVO DA MINHA HOME   */
+
+@media (max-width: 992px) {
+  .nav-home a{
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
+.nav-home a{
+  margin-left: 25px;
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+
+.nav-home a:hover{
+  color: white;
+}
+
+.container-home .ico-nav{
+  font-size: 2.4rem;
+}
+
+@media (max-width: 760px) {
+
+  .top{
+    display: none;
+  }
+
+  tr{
+    display: flex;
+    flex-direction: column;
+  }
+
+  td, th{
+    display: flex;
+  }
+
+  .boot p{
+    display: block;
+    font-weight: bold;
+    margin: 0 5% 0 0;
+    width: 70px;
+  }
+
+  .link{
+    justify-content: right;
+  }
+  
+  .link .ico-list{
+    font-size: 30px;
+    margin: 0 25px 0 0;
+  }
+  
+  .link .one{
+    margin: 0;
+  }
+}
