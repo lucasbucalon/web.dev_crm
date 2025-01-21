@@ -25,7 +25,7 @@ export default function Home() {
   const [busca, setBusca] = useState("");
   const [excluido, setExcluido] = useState("");
   const [confirme, setConfirme] = useState(false);
-  const [confirmeId, setConfirmeId] = useState("");
+  const [confirmeId, setConfirmeId] = useState<string | null>(null); // Mudança para permitir null
 
   const buscaLower = busca.toLowerCase();
   const teams = clientes.filter((cliente) =>
@@ -96,7 +96,7 @@ export default function Home() {
         <ListaCliente arrayClientes={teams} clickDelete={comDeleteUser} />
       </div>
 
-      {confirme ? (
+      {confirme && confirmeId /* Verifica se confirmeId não é nulo */ && (
         <SweetAlert
           warning
           showCancel
@@ -108,9 +108,9 @@ export default function Home() {
           reverseButtons={true}
           focusCancelBtn
           onCancel={() => setConfirme(false)}
-          onConfirm={() => deleteUser(confirmeId)}
+          onConfirm={() => deleteUser(confirmeId as string)}
         />
-      ) : null}
+      )}
     </div>
   );
 }

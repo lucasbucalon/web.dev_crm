@@ -13,10 +13,12 @@ import { AuthContext } from "../../Config/Context";
 import "./Login.css";
 
 export default function Login() {
+  // Estados do componente
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [sucesso, setSucesso] = useState("");
-  const navigate = useNavigate(); // Renomeado de setUser para navigate
+  const [loginError, setLoginError] = useState(false);
+
+  const navigate = useNavigate();
   const { setLogado } = useContext(AuthContext);
 
   const handleLogin = async () => {
@@ -26,48 +28,60 @@ export default function Login() {
         email,
         password
       );
+
+      // Configura estado de autenticação e redireciona
       setLogado(true);
-      const user = userCredential.user;
-      console.log(user);
+      console.log("Usuário logado:", userCredential.user);
       navigate("/app/home");
     } catch (error: unknown) {
+      // Tratar erros de autenticação
+      if (error instanceof Error) {
+        console.error("Erro de login:", error.message);
+      } else {
+        console.error("Erro desconhecido durante o login:", error);
+      }
       setLogado(false);
-      const errorMessage = (error as Error).message;
-      console.log(errorMessage);
-      setSucesso("N");
+      setLoginError(true); // Mostra mensagem de erro
     }
   };
 
   return (
     <div className="back">
       <div className="container">
-        <Form className="form-login">
+        <Form className="form-login" onSubmit={(e) => e.preventDefault()}>
           <a href="/">
             <Icon className="ico-dev" icon="logos:web-dev" />
           </a>
           <h1>Login</h1>
           <br />
 
+          {/* Campo de E-mail */}
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-email"
               type="email"
               placeholder="E-mail"
+              required
             />
           </Form.Group>
 
           <br />
 
+          {/* Campo de Senha */}
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="form-pass"
               type="password"
               placeholder="Senha"
+              required
             />
           </Form.Group>
 
+          {/* Botão de Login */}
           <Button
             onClick={handleLogin}
             className="form-button"
@@ -77,10 +91,14 @@ export default function Login() {
             Entrar
           </Button>
 
-          {sucesso === "N" ? (
-            <Alert className="alert-login">E-mail ou Senha inválido !</Alert>
-          ) : null}
+          {/* Exibição de mensagem de erro */}
+          {loginError && (
+            <Alert variant="danger" className="alert-login">
+              E-mail ou senha inválidos!
+            </Alert>
+          )}
 
+          {/* Links de recuperação de senha e criação de conta */}
           <div className="form-link">
             <Link to="/app/resetsenha">Esqueci minha senha</Link>
             <Link to="/app/newlogin">Criar uma conta</Link>
