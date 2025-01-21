@@ -1,42 +1,42 @@
-import Form from 'react-bootstrap/Form'
-import Alert from 'react-bootstrap/Alert'
+import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 
-import { Link, useNavigate } from 'react-router-dom'
-import { addDoc, collection } from 'firebase/firestore'
+import { Link, useNavigate } from "react-router-dom";
+import { addDoc, collection } from "firebase/firestore";
 
-import { useState } from 'react'
-import { db } from '../../Config/firebase'
+import { useState } from "react";
+import { db } from "../../Config/firebase";
 
-import './style.css'
+import "./style.css";
 
 export default function NovoCliente() {
-  const [nome, setNome] = useState('')
-  const [email, setEmail] = useState('')
-  const [fone, setFone] = useState('')
-  const [mensagem, setMensagem] = useState('')
-  const setUser = useNavigate()
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [fone, setFone] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const navigate = useNavigate(); // Renomeei a variável para "navigate"
 
   function cadastrarCliente() {
     if (nome.length === 0) {
-      setMensagem('Informe seu nome')
+      setMensagem("Informe seu nome");
     } else if (email.length === 0) {
-      setMensagem('Informe seu e-mail')
+      setMensagem("Informe seu e-mail");
     } else if (fone.length === 0) {
-      setMensagem('Informe seu numero')
+      setMensagem("Informe seu número");
     } else {
-      const data = collection(db, 'clientes')
+      const data = collection(db, "clientes");
       addDoc(data, {
         nome,
         email,
         fone,
       })
         .then(() => {
-          setMensagem('')
-          setUser('/app/home')
+          setMensagem("");
+          navigate("/app/home"); // Usei a função "navigate" corretamente
         })
         .catch((error) => {
-          setMensagem(error.message)
-        })
+          setMensagem(error.message);
+        });
     }
   }
 
@@ -83,9 +83,9 @@ export default function NovoCliente() {
             Cancelar
           </Link>
 
-          <Link onClick={cadastrarCliente} className="btn2">
+          <button onClick={cadastrarCliente} className="btn2">
             Salvar
-          </Link>
+          </button>
 
           {mensagem.length > 0 ? (
             <Alert className="alert-newClient">{mensagem}</Alert>
@@ -93,5 +93,5 @@ export default function NovoCliente() {
         </div>
       </Form>
     </div>
-  )
+  );
 }

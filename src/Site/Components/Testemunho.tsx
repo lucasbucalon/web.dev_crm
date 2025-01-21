@@ -1,4 +1,4 @@
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from "react-bootstrap/Carousel";
 
 export default function Testemunho() {
   return (
@@ -58,5 +58,5 @@ export default function Testemunho() {
         </Carousel>
       </div>
     </section>
-  )
+  );
 }

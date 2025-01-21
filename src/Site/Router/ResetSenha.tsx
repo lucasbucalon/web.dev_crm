@@ -1,33 +1,29 @@
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import Alert from 'react-bootstrap/Alert'
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { sendPasswordResetEmail } from 'firebase/auth'
-import { auth } from '../../Config/firebase'
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../Config/firebase";
 
-import './login.css'
+import "./login.css";
 
 export default function ResetSenha() {
-  const [email, setEmail] = useState('')
-  const [erro, setErro] = useState('')
-  const [sucesso, setSucesso] = useState('')
+  const [email, setEmail] = useState("");
+  const [erro, setErro] = useState("");
+  const [sucesso, setSucesso] = useState("");
 
   function resetLogin() {
     sendPasswordResetEmail(auth, email)
-    setSucesso('Email enviado com sucesso.')
-      .then((ResetUser) => {
-        const user = ResetUser.user
-        console.log(user)
-        // setUser('/app')
-        setSucesso('Email enviado com sucesso:')
+      .then(() => {
+        setSucesso("Email enviado com sucesso.");
       })
       .catch((error) => {
-        setErro('Erro ao enviar email:' + error.messag)
-      })
+        setErro("Erro ao enviar email: " + error.message);
+      });
   }
 
   return (
@@ -75,5 +71,5 @@ export default function ResetSenha() {
         </Form>
       </div>
     </div>
-  )
+  );
 }

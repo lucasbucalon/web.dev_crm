@@ -1,6 +1,6 @@
 /*    INICIO DO HOME DA MINHA APLICAÇÃO   */
 
-.title{
+.title {
   margin: 15px 0;
   text-align: center;
   background-color: gray;
@@ -9,18 +9,18 @@
   border-radius: 5px;
 }
 
-.crm-box{
+.crm-box {
   width: 100%;
   display: flex;
   margin: 0 0 15px 0;
 }
 
-.crm-single1{
+.crm-single1 {
   width: 40%;
   margin: 0 20px 0 0;
 }
 
-.crm-button{
+.crm-button {
   width: 100%;
   height: 100%;
   font-size: 1.8rem;
@@ -29,48 +29,49 @@
   align-items: center;
 }
 
-.crm-single2{
+.crm-single2 {
   width: 70%;
 }
 
-.crm-single2 Button{
+.crm-single2 Button {
   display: flex;
   align-items: center;
   padding: 0 2%;
 }
 
-.crm-single2 Button p{
+.crm-single2 Button p {
   margin: 0 0 0 5px;
 }
 
-.crm-input{
+.crm-input {
   height: 100%;
 }
 
-.crm-font{
+.crm-font {
   font-size: 1.8rem;
 }
 
 @media (max-width: 430px) {
-  .crm-box{
+  .crm-box {
     flex-wrap: wrap;
     margin: 0;
   }
 
-  .crm-single1, .crm-single2{
+  .crm-single1,
+  .crm-single2 {
     width: 100%;
     margin: 0 0 15px 0;
   }
 
-  .crm-button{
+  .crm-button {
     padding: 1.5% 0;
   }
 
-  .crm-single2 Button{
+  .crm-single2 Button {
     padding: 0 4%;
   }
 
-  .crm-single2 Button p{
+  .crm-single2 Button p {
     display: none;
   }
 }

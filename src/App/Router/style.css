@@ -1,6 +1,6 @@
 /*    CADASTRO DE NOVO CLIENTE DA MINHA APLICAÇÃO   */
 
-.title{
+.title {
   margin: 15px 0;
   text-align: center;
   background-color: gray;
@@ -9,23 +9,23 @@
   border-radius: 5px;
 }
 
-.colum{
+.colum {
   padding: 0 20%;
   font-size: 1.8rem;
 }
 
-.colum .form{
+.colum .form {
   font-size: 1.6rem;
   padding: 1% 0 1% 2%;
 }
 
-.box-btn{
+.box-btn {
   width: 100%;
   text-align: center;
   margin: 35px 0 0 0;
 }
 
-.btn1{
+.btn1 {
   border: 1px solid #257cff;
   border-radius: 5px;
   font-size: 1.8rem;
@@ -34,7 +34,7 @@
   text-decoration: none;
 }
 
-.btn2{
+.btn2 {
   background-color: #257cff;
   color: white;
   border-radius: 5px;
@@ -44,46 +44,46 @@
   text-decoration: none;
 }
 
-.btn1:hover{
+.btn1:hover {
   border: 1px solid blue;
   color: blue;
 }
 
-.btn2:hover{
+.btn2:hover {
   background-color: blue;
 }
 
-.alert-newClient{
+.alert-newClient {
   margin-top: 25px;
   color: red;
-  background-color: rgba(255, 0, 0, 0.200);
+  background-color: rgba(255, 0, 0, 0.2);
   border: 1px solid red;
 }
 
 @media (max-width: 768px) {
-  .colum{
+  .colum {
     padding: 4% 5%;
     height: 100vh;
   }
 
-  .colum .form{
+  .colum .form {
     font-size: 1.8rem;
     padding: 1.5% 0 1.5% 2.5%;
   }
 
-  .box-btn{
+  .box-btn {
     padding: 0 0 10% 0;
     display: flex;
     flex-direction: column;
   }
 
-  .btn1{
+  .btn1 {
     font-size: 2rem;
     padding: 2.5% 0;
     margin: 10px 0;
   }
-  
-  .btn2{
+
+  .btn2 {
     font-size: 2rem;
     padding: 2.5% 0;
     margin: 10px 0;

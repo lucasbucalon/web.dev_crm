@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
-import Footer from './Site/Components/Footer'
+import Footer from "./Site/Components/Footer";
 
 export default function App() {
   return (
@@ -8,5 +8,5 @@ export default function App() {
       <Outlet />
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 /*    MENU HOME DA MINHA APLICAÇÃO   */
 
-.container-home{
+.container-home {
   background-color: #257cff;
   padding: 15px 1%;
   position: static;
@@ -8,92 +8,92 @@
   z-index: 99;
 }
 
-.nav-home{
+.nav-home {
   width: 100%;
 }
 
-/*    LISTA DE CLIENTE DE MINHA APLICAÇÃO   */     
+/*    LISTA DE CLIENTE DE MINHA APLICAÇÃO   */
 
-.boot p{
+.boot p {
   display: none;
 }
 
-.top th{
+.top th {
   background-color: rgb(128, 128, 128);
   color: white;
 }
 
-.link{
+.link {
   display: flex;
   justify-content: center;
 }
 
-.link .ico-list{
+.link .ico-list {
   font-size: 22px;
   color: red;
 }
 
-.link .one .ico-list{
+.link .one .ico-list {
   margin: 0 15px 0 0;
-  color: blue !important; 
+  color: blue !important;
 }
 
 /*    DESIGNER RESPONSIVO DA MINHA HOME   */
 
 @media (max-width: 992px) {
-  .nav-home a{
+  .nav-home a {
     text-align: center;
     margin: 5px 0;
   }
 }
 
-.nav-home a{
+.nav-home a {
   margin-left: 25px;
   color: rgb(224, 224, 224);
   text-decoration: none;
   font-size: 1.9rem;
 }
 
-.nav-home a:hover{
+.nav-home a:hover {
   color: white;
 }
 
-.container-home .ico-nav{
+.container-home .ico-nav {
   font-size: 2.4rem;
 }
 
 @media (max-width: 760px) {
-
-  .top{
+  .top {
     display: none;
   }
 
-  tr{
+  tr {
     display: flex;
     flex-direction: column;
   }
 
-  td, th{
+  td,
+  th {
     display: flex;
   }
 
-  .boot p{
+  .boot p {
     display: block;
     font-weight: bold;
     margin: 0 5% 0 0;
     width: 70px;
   }
 
-  .link{
+  .link {
     justify-content: right;
   }
-  
-  .link .ico-list{
+
+  .link .ico-list {
     font-size: 30px;
     margin: 0 25px 0 0;
   }
-  
-  .link .one{
+
+  .link .one {
     margin: 0;
   }
 }

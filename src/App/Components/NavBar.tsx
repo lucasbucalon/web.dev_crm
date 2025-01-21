@@ -1,13 +1,13 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from "react-router-dom";
 
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './cliente.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./cliente.css";
 
 export default function Menuhome() {
   return (
@@ -22,7 +22,7 @@ export default function Menuhome() {
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0 nav-home"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: "100px" }}
               navbarScroll
             >
               <Link to="/app/home">Home</Link>
@@ -36,5 +36,5 @@ export default function Menuhome() {
       </Navbar>
       <Outlet />
     </div>
-  )
+  );
 }

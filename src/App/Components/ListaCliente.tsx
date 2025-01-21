@@ -1,12 +1,21 @@
-import Table from 'react-bootstrap/Table'
+import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import "./cliente.css";
 
-import { Link } from 'react-router-dom'
+interface Cliente {
+  id: number;
+  nome: string;
+  email: string;
+  fone: string;
+}
 
-import { Icon } from '@iconify/react'
+interface Props {
+  arrayClientes: Cliente[];
+  clickDelete: (id: number) => void;
+}
 
-import './cliente.css'
-
-export default function ListaCliente(props) {
+export default function ListaCliente(props: Props) {
   return (
     <Table striped bordered hover>
       <thead className="top">
@@ -19,44 +28,33 @@ export default function ListaCliente(props) {
         </tr>
       </thead>
       <tbody className="boot">
-        {props.arrayClientes.map((cliente) => {
-          return (
-            <tr key={cliente.id}>
-              <th>
-                <p>Código:</p>
-                {cliente.id}
-              </th>
-              <td>
-                <p>Nome:</p>
-                {cliente.nome}
-              </td>
-              <td>
-                <p>E-mail:</p>
-                {cliente.email}
-              </td>
-              <td>
-                <p>Telefone:</p>
-                {cliente.fone}
-              </td>
-              <td className="link">
-                <Link
-                  className="one"
-                  to={'/app/home/editarcliente/' + cliente.id}
-                >
-                  <Icon className="ico-list" icon="bxs:edit" />
-                </Link>
+        {props.arrayClientes.map((cliente) => (
+          <tr key={cliente.id}>
+            <td>{cliente.id}</td>
+            <td>{cliente.nome}</td>
+            <td>{cliente.email}</td>
+            <td>{cliente.fone}</td>
+            <td className="link">
+              <Link
+                className="one"
+                to={`/app/home/editarcliente/${cliente.id}`}
+              >
+                <Icon className="ico-list" icon="bxs:edit" />
+              </Link>
 
-                <Link onClick={() => props.clickDelete(cliente.id)}>
-                  <Icon
-                    className="ico-list"
-                    icon="material-symbols:delete-rounded"
-                  />
-                </Link>
-              </td>
-            </tr>
-          )
-        })}
+              <button
+                className="link"
+                onClick={() => props.clickDelete(cliente.id)}
+              >
+                <Icon
+                  className="ico-list"
+                  icon="material-symbols:delete-rounded"
+                />
+              </button>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </Table>
-  )
+  );
 }

@@ -1,33 +1,33 @@
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import Alert from 'react-bootstrap/Alert'
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
-import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../Config/firebase'
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../Config/firebase";
 
-import './login.css'
+import "./login.css";
 
 export default function NewLogin() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [mensagem, setMensagem] = useState('')
-  const setUser = useNavigate()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const setUser = useNavigate();
 
   function newUserLogin() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((CreateUser) => {
-        const user = CreateUser.user
-        console.log(user)
-        setUser('/app')
+        const user = CreateUser.user;
+        console.log(user);
+        setUser("/app");
       })
       .catch((error) => {
-        setMensagem(error.message)
-      })
+        setMensagem(error.message);
+      });
   }
 
   return (
@@ -80,5 +80,5 @@ export default function NewLogin() {
         </Form>
       </div>
     </div>
-  )
+  );
 }

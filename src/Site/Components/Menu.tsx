@@ -1,8 +1,8 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
 export default function Menu() {
   return (
@@ -16,7 +16,7 @@ export default function Menu() {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0 nav"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <a href="#banner">Home</a>
@@ -28,5 +28,5 @@ export default function Menu() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
+  );
 }

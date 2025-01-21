@@ -1,7 +1,7 @@
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
 export default function Footer() {
-  const ano = new Date().getFullYear()
+  const ano = new Date().getFullYear();
 
   return (
     <section id="footer" className="footer">
@@ -26,5 +26,5 @@ export default function Footer() {
         <i>Desenvolvido pela Web.Dev - {ano}</i>
       </div>
     </section>
-  )
+  );
 }

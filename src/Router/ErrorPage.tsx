@@ -7,5 +7,5 @@ export default function ErrorPage() {
       <br />
       <h2>Página não encontrada !</h2>
     </center>
-  )
+  );
 }

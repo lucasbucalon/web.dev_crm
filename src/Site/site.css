@@ -1,6 +1,6 @@
 /*    MENU DA MINHA APLICAÇÃO   */
 
-.container-nav{
+.container-nav {
   background-color: #257cff;
   padding: 10px 5%;
   position: fixed;
@@ -10,79 +10,79 @@
 }
 
 @media (min-width: 992px) {
-  .nav{
+  .nav {
     position: absolute;
     right: 5%;
   }
 }
 
-.nav a{
+.nav a {
   margin-left: 25px;
   color: rgb(224, 224, 224);
   text-decoration: none;
 }
 
-.nav a:hover{
+.nav a:hover {
   color: white;
   border-bottom: 1px solid white;
 }
 
-.container-nav .ico-nav{
+.container-nav .ico-nav {
   font-size: 2.4rem;
 }
 
 /*    BANNER DA MINHA APLICAÇÃO   */
 
-.banner{
+.banner {
   background-color: #257cff;
   color: white;
   padding: 0 0 60px 0;
   margin-top: 50px;
 }
 
-.banner-img img{
+.banner-img img {
   width: 100%;
 }
 
-.banner-text{
+.banner-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.banner-text h1{
+.banner-text h1 {
   padding: 0 2%;
 }
 
-.btn-banner{
+.btn-banner {
   margin: 1% 15%;
   padding: 1%;
 }
 
-.btn-banner a{
+.btn-banner a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
   display: block;
 }
 
-.bnt-hover:hover{
+.bnt-hover:hover {
   background-color: rgba(0, 0, 0, 0.349);
 }
 
 /*    FEATURE DA MINHA APLICAÇÃO    */
 
-.feature{
+.feature {
   padding: 5%;
 }
 
-.feature-box{
+.feature-box {
   text-align: center;
   padding: 5%;
 }
 
-.feature-box .ico-fea{
+.feature-box .ico-fea {
   font-size: 5.5rem;
   color: #257cff;
   margin-bottom: 15px;
@@ -90,50 +90,50 @@
 
 /*    TESTEMUNHO DA MUNHA APLICÇÃO    */
 
-.testemunho{
+.testemunho {
   padding: 5% 0;
   background-color: rgb(223, 231, 255);
 }
 
-.testemunho .box{
+.testemunho .box {
   width: 100%;
   padding: 0 10%;
   text-align: center;
 }
 
-.testemunho-img{
-max-width: 15%;
-min-width: 80px;
-border-radius: 100%;
-display: block;
-margin: 10px auto;
+.testemunho-img {
+  max-width: 15%;
+  min-width: 80px;
+  border-radius: 100%;
+  display: block;
+  margin: 10px auto;
 }
 
 /*    PLANOS DA MINHA APLICÇÃO    */
 
-.planos{
+.planos {
   padding: 5% 0;
 }
 
-.planos-box{
+.planos-box {
   margin: auto;
 }
 
-.card{
+.card {
   width: 25rem;
   padding: 1%;
   margin: 5% auto;
 }
 
-.planos-tag{
+.planos-tag {
   padding: 5% 5%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.349);
   font-size: 3rem;
 }
 
-/*    FOOTER DA MINHA APLICAÇÃO   */ 
+/*    FOOTER DA MINHA APLICAÇÃO   */
 
-.footer{
+.footer {
   width: 100%;
   padding: 2%;
   display: flex;
@@ -142,94 +142,93 @@ margin: 10px auto;
   background-color: #257cff;
 }
 
-.footer ul{
+.footer ul {
   width: 100%;
   padding: 0;
 }
 
-.footer ul a{
-  padding: 0 2% ;
+.footer ul a {
+  padding: 0 2%;
   font-size: 2.5rem;
   color: black;
 }
 
-.footer ul a:hover{
+.footer ul a:hover {
   color: rgb(66, 66, 66);
 }
 
-.footer-tag:hover{
+.footer-tag:hover {
   color: rgb(66, 66, 66);
 }
 
-.info{
+.info {
   width: 100%;
   font-size: 1.8rem;
   display: flex;
   flex-direction: column;
 }
 
-.info a{
+.info a {
   margin: 2% 0;
   color: black;
 }
 
-.info a:hover{
+.info a:hover {
   color: rgba(0, 0, 0, 0.527);
 }
 
 /*    DESIGNER RESPONSIVO   */
 
 @media (max-width: 768px) {
-  .banner{
+  .banner {
     padding: 10% 0 60px 0;
     margin: 40px 0 0 0;
   }
 
-  .testemunho{
+  .testemunho {
     padding: 10% 0;
   }
 
-  .testemunho .box{
+  .testemunho .box {
     padding: 0 15%;
   }
 
-  .planos-box{
+  .planos-box {
     display: flex;
     flex-direction: column;
   }
 
-  .card{
+  .card {
     margin: 10% auto;
   }
 
-  .footer{
+  .footer {
     padding: 5% 2%;
   }
 
-  .footer ul a{
+  .footer ul a {
     margin: 0 3%;
   }
 
-  .info a{
+  .info a {
     margin: 5% 0;
   }
 }
 
 @media (max-width: 500px) {
-
-  .feature-box{
+  .feature-box {
     margin: 10% 0;
   }
 
-  .footer{
+  .footer {
     padding: 10% 2%;
   }
 
-  .footer ul a{
+  .footer ul a {
     margin: 0 5%;
   }
 
-  .footer-tag{
+  .footer-tag {
     margin: 5% 2%;
   }
 }

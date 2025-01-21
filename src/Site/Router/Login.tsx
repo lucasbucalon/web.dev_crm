@@ -16,23 +16,26 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [sucesso, setSucesso] = useState('')
-  const setUser = useNavigate()
+  const navigate = useNavigate() // Renomeado de setUser para navigate
   const { setLogado } = useContext(AuthContext)
 
-  const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setLogado(true)
-        const user = userCredential.user
-        console.log(user)
-        setUser('/app/home')
-      })
-      .catch((error) => {
-        setLogado(false)
-        const errorMessage = error.message
-        console.log(errorMessage)
-        setSucesso('N')
-      })
+  const handleLogin = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      )
+      setLogado(true)
+      const user = userCredential.user
+      console.log(user)
+      navigate('/app/home')
+    } catch (error) {
+      setLogado(false)
+      const errorMessage = error.message
+      console.log(errorMessage)
+      setSucesso('N')
+    }
   }
 
   return (

@@ -1,11 +1,11 @@
-import Banner from './Components/Banner'
-import Menu from './Components/Menu'
-import Features from './Components/Features'
-import Testemunho from './Components/Testemunho'
-import Planos from './Components/Planos'
+import Banner from "./Components/Banner";
+import Menu from "./Components/Menu";
+import Features from "./Components/Features";
+import Testemunho from "./Components/Testemunho";
+import Planos from "./Components/Planos";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './site.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./site.css";
 
 export default function Site() {
   return (
@@ -16,5 +16,5 @@ export default function Site() {
       <Testemunho />
       <Planos />
     </div>
-  )
+  );
 }
