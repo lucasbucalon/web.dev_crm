@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 
 import { Icon } from "@iconify/react";
+import "./Login.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
