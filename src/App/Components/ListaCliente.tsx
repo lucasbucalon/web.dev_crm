@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import "./cliente.css";
 
 interface Cliente {
-  id: number;
+  id: string; // Alinhado com Firebase
   nome: string;
   email: string;
   fone: string;
@@ -12,7 +12,7 @@ interface Cliente {
 
 interface Props {
   arrayClientes: Cliente[];
-  clickDelete: (id: number) => void;
+  clickDelete: (id: string) => void;
 }
 
 export default function ListaCliente(props: Props) {

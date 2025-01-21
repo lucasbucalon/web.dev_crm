@@ -1,11 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../Config/firebase";
 
 import { Icon } from "@iconify/react";
-
 import ListaCliente from "../Components/ListaCliente";
 
 import Button from "react-bootstrap/Button";
@@ -111,16 +109,6 @@ export default function Home() {
           focusCancelBtn
           onCancel={() => setConfirme(false)}
           onConfirm={() => deleteUser(confirmeId)}
-          customButtons={
-            <React.Fragment>
-              <Button variant="primary" onClick={() => setConfirme(false)}>
-                Não
-              </Button>
-              <Button variant="danger" onClick={() => deleteUser(confirmeId)}>
-                Sim
-              </Button>
-            </React.Fragment>
-          }
         />
       ) : null}
     </div>

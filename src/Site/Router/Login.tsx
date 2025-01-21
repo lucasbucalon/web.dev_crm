@@ -1,42 +1,42 @@
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import Alert from 'react-bootstrap/Alert'
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
-import { Link, useNavigate } from 'react-router-dom'
-import { useState, useContext } from 'react'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../Config/firebase'
-import { AuthContext } from '../../Config/Context'
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../Config/firebase";
+import { AuthContext } from "../../Config/Context";
 
-import './Login.css'
+import "./Login.css";
 
 export default function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [sucesso, setSucesso] = useState('')
-  const navigate = useNavigate() // Renomeado de setUser para navigate
-  const { setLogado } = useContext(AuthContext)
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [sucesso, setSucesso] = useState("");
+  const navigate = useNavigate(); // Renomeado de setUser para navigate
+  const { setLogado } = useContext(AuthContext);
 
   const handleLogin = async () => {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
-        password,
-      )
-      setLogado(true)
-      const user = userCredential.user
-      console.log(user)
-      navigate('/app/home')
-    } catch (error) {
-      setLogado(false)
-      const errorMessage = error.message
-      console.log(errorMessage)
-      setSucesso('N')
+        password
+      );
+      setLogado(true);
+      const user = userCredential.user;
+      console.log(user);
+      navigate("/app/home");
+    } catch (error: unknown) {
+      setLogado(false);
+      const errorMessage = (error as Error).message;
+      console.log(errorMessage);
+      setSucesso("N");
     }
-  }
+  };
 
   return (
     <div className="back">
@@ -77,7 +77,7 @@ export default function Login() {
             Entrar
           </Button>
 
-          {sucesso === 'N' ? (
+          {sucesso === "N" ? (
             <Alert className="alert-login">E-mail ou Senha inválido !</Alert>
           ) : null}
 
@@ -88,5 +88,5 @@ export default function Login() {
         </Form>
       </div>
     </div>
-  )
+  );
 }
