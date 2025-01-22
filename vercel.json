@@ -3,14 +3,14 @@
   "name": "web-dev-crm",
   "builds": [
     {
-      "src": "src/main.tsx",
+      "src": "package.json",
       "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/$1"
+      "dest": "/src/main.tsx"
     }
   ]
 }
