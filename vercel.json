@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "name": "web-dev-crm",
   "builds": [
     {
-      "src": "package.json",
+      "src": "src/main.tsx",
       "use": "@vercel/node"
     }
   ],
