@@ -1,7 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import "./Login.css";
 import { Icon } from "@iconify/react";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -10,7 +9,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../Config/firebase";
 import { AuthContext } from "../../Config/Context";
 
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
   // Estados do componente
