@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": "22.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node src/main.tsx",
@@ -24,7 +24,7 @@
     "react-bootstrap-sweetalert": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^0.0.2"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
@@ -38,6 +38,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "rollup": "^4.31.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
