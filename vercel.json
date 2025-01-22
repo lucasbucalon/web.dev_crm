@@ -3,13 +3,13 @@
   "builds": [
     {
       "src": "src/main.jsx",
-      "use": "@vercel/node"
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/main.jsx"
+      "dest": "/index.html"
     }
   ]
 }
