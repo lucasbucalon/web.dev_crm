@@ -1,3 +1,16 @@
 {
-  "version": 2
+  "version": 2,
+  "name": "web-dev-crm",
+  "builds": [
+    {
+      "src": "src/main.tsx",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    }
+  ]
 }
