@@ -11,7 +11,7 @@ export default function Testemunho() {
               src="./image/cliente.jpg"
               alt="Third slide"
             />
-            <i>João Lucas</i>
+            <i>João j. Lucas</i>
             <h2>
               Excelente ferramenta para acompanhamento do dia a dia, sendo
               fléxivel o suficiente para a maior parte dos usos. Seja para
