@@ -9,5 +9,4 @@
 <p> React + TypeScript + Vite + Firebase<p>
 </br>
 
-<!-- <img width="50%" align="center" src="/image/linkpage_image.jpg" alt="imagem da página"> -->
 </div>
