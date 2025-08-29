@@ -8,7 +8,7 @@ export default function Testemunho() {
           <Carousel.Item className="box">
             <img
               className="testemunho-img"
-              src="./image/cliente.jpg"
+              src="/image/cliente.jpg"
               alt="Third slide"
             />
             <i>João j. Lucas</i>
