@@ -24,10 +24,7 @@ export default function Banner() {
           </div>
 
           <div className="col-lg-6 banner-img">
-            <img
-              src="../../public/image/web.png"
-              alt="imagem de um computador"
-            />
+            <img src="/image/web.png" alt="imagem de um computador" />
           </div>
         </div>
       </div>
